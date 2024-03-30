@@ -1,8 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require("body-parser");
+
 
 const app = express();
-app.use(express.json());
+
+
+// Set up middleware
+app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://markbosirekenyariri:09kumamoto.@cluster0.g3nicnh.mongodb.net/infobot_db?retryWrites=true&w=majority&appName=Cluster0')
